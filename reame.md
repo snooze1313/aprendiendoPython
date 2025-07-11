@@ -18,6 +18,6 @@ Mi brujula para este viaje esta siendo el libro (por algun motivo siento que es 
 tenia tiempo sin sentir algo asi) "El lenguaje de programacion Python de principio a fin" por
 Angel Pablo Hinojosa Gutierrez.
 
-![alt](\libro.png)
+![alt](/libro.jpg)
 
 _nunca pregunten el precio del chicharron en un sueño_
