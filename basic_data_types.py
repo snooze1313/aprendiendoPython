@@ -19,3 +19,95 @@ cadena3 = "Hola, 'mundo'!"
 cadena4 = 'Hola, "mundo"!'
 print(cadena3)
 print(cadena4)
+
+print("\n---------\n")#seperador
+
+#podemos solatar de linea una cadena de texto con el caracter de escape \n, que indica un salto de linea.
+print("Hola, mundo!\nPython es genial!")
+
+#otros caractertes de escape son:
+#\a #alerta ASCII Bell 
+#\b #retroceso
+#\f #salto de pagina
+#\n #salto de linea
+#\r #retorno de carro
+#\t #tabulacion horizontal
+#\v #tabulacion vertical
+
+print("\n---------\n")#seperador
+
+#podemos usar el prefijo f para crear cadenas de texto formateadas, que permiten incluir variables o expresiones dentro de la cadena. la f es de formatted string.
+nombre = "juan"
+edad = 30
+print(f"Hola, {nombre}! Tienes {edad} años.")
+
+print("\n---------\n")#seperador
+
+#esto tambien pede ser usado con funciones, operaciones, metodos o con cualquier expresion que retorne un valor.
+print (f"El resultado de 2 + 3 es {2 + 3}.")
+print(f"hola soy {nombre.upper()} y tengo {edad} años.")
+print(f"la variable nombre es de tipo: {type(nombre)})")
+
+#las variables pueden ser declaradas como cadena de texto sin tener que meter texo.
+cadena5 = str() #esto crea una cadena de texto vacia, que es un objeto str.
+
+print("\n------\n")#separador
+
+#independientemente de como hayamos declarado las variables podemos concatenarlas usando (+)
+saludo = "hola"
+nombre = "juan"
+print(saludo + " " + nombre) #imprime la frase "hola juan"
+
+#no se pueden concatenar strings y numeros por lo que se debera transformar los numeros en str.
+print(nombre + " tiene " + str(edad) + " a;os") #se transformo en str la edad con el metodo str()
+
+
+print("\n------\n") #separador
+
+#podemos hacer multiplicaciones de string con el operador *
+print("hola " *  3) #imprime hola 3 veces
+
+
+print("\n------\n") #separador
+
+#la clase string tiene varios metodos como: upper(), lower(), title(), capitalize().
+frase_pablo = "hola, soy plablo y estoy de paso"
+print(frase_pablo.upper()) #hace mayusculas toda la cadena
+print(frase_pablo.lower()) #hace minuscula toda la cadena
+print(frase_pablo.title()) #hace mayuscula la primera letra de cada palabra
+print(frase_pablo.capitalize()) #hace mayuscula la primera letra de la cadena
+
+print("\n------\n") #separador
+
+#el metodo stripe regresa una copia de la cadena pero sin los espacios (los tabs cuentan como espacio, junto con los \n) de el principio y el final
+cadena = "  hola  mundo- "
+#tab aqui --
+print(cadena.strip())
+
+#se pueden pasar un argumento
+print(cadena.strip(" hol"))
+
+#puedes hacer que inicie al revez
+print(cadena.rstrip("o- "))
+
+
+print("\n------\n") #separador
+
+
+#el metodo replace retorna una copia de una cedena de texto y reemplaza las coincidencias que fueron asignadas como argumento
+cadena = "una rosa es una rosa"
+print(cadena.replace("rosa", "margarita"))
+
+#un metodo bastante util es format(), admite tantos argumentos como sean necesarios.
+cadena = "Hola, soy {}".format("pablo")
+print(cadena)
+
+print("\n------\n") #separador
+
+#al ser format un metodo y no una convencion de formato como f-string, no estas limitado cadenas de texto, sino que puedes usar variables.
+nombre = "pablo"
+cadena = "hola, soy {}".format(nombre)
+print(cadena)
+
+plantilla = "Hola, soy{}"
+resultado = plantilla.format(nombre)
