@@ -111,3 +111,42 @@ print(cadena)
 
 plantilla = "Hola, soy{}"
 resultado = plantilla.format(nombre)
+
+print("\n------\n") #separador
+
+#se puede usar varios espacios marcado con {} las cuales seran llenadas con los argumentos que se les pase, si se les pasa mas argumentos de los especificados dara error.
+nombre = "plablo"
+masacota = "un gato"
+cadena = "hola soy {} y mi masacota es {}".format(nombre, masacota)
+print(cadena)
+
+print("\n------\n") #separador
+
+#se puede identar las llaves de este modo iniciando por cero: {0}, {1}, etc.
+cadena = "hola soy {1} y mi masacota es {0}".format(nombre, masacota)
+print(cadena) #las variables se invierten e imprime la variable masacota primero y nombre despues
+
+print("\n------\n") #separador
+
+#de mismo modo puede usar argumentos como:
+cadena = "hola soy {a} y mi masacota es {b}".format(a = nombre, b = masacota)
+print(cadena)
+
+print("\n------\n") #separador
+
+#bytes
+#otro prefijo que podemos usar es "b" o "B", que indica que lo que estamos definiendo no es una cadena de texto normal (un objeto str), sino una cadena de bytes (un objeto de la clse bytes).
+#las cadenas de bytes solo admiten caracteres ASCII
+b"Esto es una cadena de bytes"
+
+#en ese sentido las cadena de bytes son una secuencia de numero enteros que van del 0 al 256 no caracteres. El que los bytes se pueden representar como una literalnos facilita su uso.
+
+#al igual que con string tenemos el metodo str(), en bytes tenemos el metodo bytes(), con la salvedad de que no todos los objetos tienen una representacion en bytes.
+
+print(bytes()) #imprime una cadena de bytes de longitud cero, literalmente b''.
+
+#si se le pasa com argumento un numero entero como 3, retornara un objeto de tipo byte con tantos ceros como indique ese numero.
+print(bytes(3)) #imprime: b'\x00\x00\x00'
+
+#se puede pasar como argumento una cadena de texto, cuyo caso necesitara el argumento "utf-8" o "ascii"
+print(bytes("hola mundo", "utf-8")) #imprime: b'hola mundo'
