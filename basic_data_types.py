@@ -150,3 +150,27 @@ print(bytes(3)) #imprime: b'\x00\x00\x00'
 
 #se puede pasar como argumento una cadena de texto, cuyo caso necesitara el argumento "utf-8" o "ascii"
 print(bytes("hola mundo", "utf-8")) #imprime: b'hola mundo'
+
+print("\n------\n") #separador
+
+
+#cadena y bytes como secuencia
+#los objetos de tiipo str son secuencias de caracteres unicode, mientras que los de tipo bytes son secuencias de bytes. 
+#para leer un caracter individual de una cadena de caracteres, ponemos unos corchetes ([]), por ejemplo:
+print("hola"[0]) #imprime la primera letra de la cadena
+
+saludo = "hola"
+print(saludo[2]) #imprime la tercera letra
+print(saludo[3]) #imprime la cuarta letra
+#el indice comienza desde 0, y no se puede poner un indice mayor a la cantidad de los caracteres menos 1.
+
+print("\n------\n") #separador
+
+#En el caso de los bytes se puede hacer lo mismo.
+print(b"hola"[1]) #imprime la primera letra de la cadena
+saludo = b"hola mundo"[8]
+print(saludo)
+
+print("\n------\n") #separador
+
+#numeros enteros
