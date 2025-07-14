@@ -239,3 +239,21 @@ print(num)
 print("\n------\n") #separador
 
 #numero flotantes
+#Para representar un numero de coma flotante (de la clase float), tenemos que agregar un punto (.) seguido de la parte de punto flotante.
+4.5
+-12.98
+3.1416
+1.0
+0.0
+#al igual que int podemos usar "_" para mejorar la legibilidad.
+#al igual que la notacienon cientifica la podemos representar con una "e" minuscula o mayuscula, seguido del orden de magnitud.(es decir la potencia 10 por la que se multiplica).
+1e1_000
+3.14e-4
+0E0
+-1E1
+
+#podemos obtener numeros float de forma explicita mediante la funcion float(). Si se ejecuta sin argumento, retornara un cero de tipo flotante. si le pasamos un numero lo retornara de tipo float. al igual si le pasamos numeros del tipo str o byte.
+print(float())
+print(float(1/2))
+print(float('1983.4'))
+print(float("1.4e3"))
