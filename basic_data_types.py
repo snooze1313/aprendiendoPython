@@ -174,3 +174,68 @@ print(saludo)
 print("\n------\n") #separador
 
 #numeros enteros
+#en python, el formato numerico elemental es el numero entero (clase int), los numeros enteros son aquellos que tienen parte entera y se pueden representar simplemente escribiendo el numero, sin comillas ni ningun tipo de marcador.
+4
+75
+1000
+
+#no se pueden usar comas, puntos o espacios para separar las distintas magnitudes (miles, millones, etc), pero python permite usar el signo (_) para agrupar cifras:
+1_000_000
+25_32_12_86
+1_2_3
+#los guiones bajos son solo para que el codigo resulte mas legible, el interprete de python simplemente lo ignorara, por lo que estos numeros son identicos para python:
+1000000
+1_000_000
+10_00_00_0
+1_0_0_0_0_0_0
+
+print("\n------\n") #separador
+
+#cuando representamos un literal numerico en el formato decimal el primer digito no puede ser un cero osaltara un error.
+#ademas del sistema decimal, podemos usar otras bases para escribir nuestros nuimero.
+#El formato binario es aquel que emplea 1 y 0. Se indica que un numero esta representado precediendo de un cero y una "b" mayuscula o minuscula.
+0b111110
+0B10000
+0b1_0_0
+
+#el formato octal, que usa los digitos del 0 al 8, se representa poniendo un cero y una "o" mayuscula o minuscula:
+0o547
+0O5320
+0o3_64
+
+#El formato hexadecimal usa los dieciseis digitos. Para representar los digitos por encima del 9 se usa las letras "a" a la "F" (en mayusculas o minusculas, aunque es preferible usar las mayusculas). Para indicar que el numero esta en base hexadesimal, se antepone el cero seguido de la letra "x", en mayusculas o minusculas.
+0X17B5
+0xF0B6
+0xA9_01_4B
+
+#Es importante tener en cuenta que, aunque representemos una literal numerico en formato binario, octal, hexadesimal, python almacena los numeros enteros como el mismo tipo de objeto numerico, por lo que estas cuatro expresiones mostraran lo mismo.
+print(42)
+print(0B101010)
+print(0O052)
+print(0X2A)
+
+#independiente mente del tipo de base se pueden indicar numeros negativos.
+-42
+-0B101010
+-0O052
+-0X2A
+
+
+print("\n------\n") #separador
+
+#se puede definir un numero intexplicitamente con la funcion int(), invocado sin ningun argumento retornara 0.
+#cuando se le pasa como argumento un numero decimal, este redondeara hacia abajo. cuando se le pasa un numero binario, octal o hexadecimal lo retornara como entero.
+print(int()) #imprime 0
+
+print(int(3.1416)) #imprime 3
+num = int(2 + 6)
+print(num)
+num = int("1000", 2)
+print(num)
+num = int("0O62", 0)
+print(num)
+
+
+print("\n------\n") #separador
+
+#numero flotantes
