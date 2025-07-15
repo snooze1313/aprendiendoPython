@@ -257,3 +257,39 @@ print(float())
 print(float(1/2))
 print(float('1983.4'))
 print(float("1.4e3"))
+
+
+print("\n------\n") #separador
+
+
+#numeros complejos
+#python tiene una tercera clase de numeros menos utilizada, se trata de los numeros completos de la clase complex, y se usa para representar aquellos numeros imaginiarios.
+#serepresentan en la forma 4 + 5j, donde el numero anterior al signo + es la oparte real, y el numero posterior debe terminar en j mayusculas o minusculas, es la parte imaginaria. si la parte imaginario es negativa, el signo debe ser un -, como el siguiente ejemplo: 4 - 5j.
+12 + 6j
+3 + 4j
+4.0 - 0j
+0j
+23.9j
+
+#se pueden generar numeros complejos con la funcion complex(), sin argumentos esta retornara 0j, si se le retorna un argumento numerico retornara ese valor en el tipo complejo, como ocurre con todos los valores numericos se puede usar _ para mejorar la legibilidad.
+print(complex(3.4))
+print(complex(239))
+print(complex(0))
+print(complex(7e9))
+
+
+print("\n------\n") #separador
+
+#tambien funciona si se le pasa como argumento una cadena de texto numerica
+print(complex("3.4"))
+print(complex("239"))
+print(complex("0"))
+print(complex("7e9"))
+
+
+print("\n------\n") #separador
+
+#si se le pasa como argumento un numero, este sera usado como la parte imaginaria
+print(complex(3, 7))
+print(complex(0, 21))
+print(complex(10, 3e7))
