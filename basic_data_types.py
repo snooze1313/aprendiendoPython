@@ -326,5 +326,16 @@ print(bool(...))
 print("\n------\n") #separador
 
 #Clases especiales
-#None
 
+#None
+#el objeto none es lo que retornamos en las funciones que no retornan explicitamente ningun resultado. Se usa en muchas circunstancias, siempre que es necesario indicar la ausencia de una objeto. es un sigleton, un objeto del que solo hay una instancia. es dfecir: todos lo None son referenciasd al mismo None. En un contexto booleano, None retorna False.
+
+
+#NotImplemented
+#Al igual que none, notimplemented se usa como retorno en algunos metodos numericos y de comparacion especiales, para indicar que el metodo que lo retorna no esta implementado.
+#En las operaciones logicas, notimplemented retorna True, pero esto es una caracteristica obsoleta, y notimplemented no deberia usarse en un contexto booleano.
+
+
+#Eli[sis
+#Elipsis es otro singleton. Se representa con un literal por medio de tres puntos seguidos (...) y tambien con la palabra reservada Elipsis. Actualmente no tiene ningun tipo de uso en python (salvo en algunos paquetes de terceros, como el paquete de calculo NumPy).
+#En un contexto booleano, Elipsis retornara True.
