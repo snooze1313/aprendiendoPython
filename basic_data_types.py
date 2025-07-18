@@ -293,3 +293,38 @@ print("\n------\n") #separador
 print(complex(3, 7))
 print(complex(0, 21))
 print(complex(10, 3e7))
+
+print("\n------\n") #separador
+
+
+#valores logicos
+#los valores de clase bool, tambien llamados valores logicos o "booleanos" son solo dos: "cierto" y "falso", que en python se representan mediante las palabras reservadas True y False, respectivamente.
+True
+False
+
+#Se utilizan en muchos contextos en los que nuestros proogramas tengan que tomar desiciones en base a ciertas condiciones, y hay muchas funciones y operaciones que retornan valores logicos.
+
+#Las listas, tuplas, diccionarios y otros contenedores retornaran True si contienen al menos un elemento y False si estan vacios.
+print("retornaran false: ")
+print(bool())
+print(bool(0))
+print(bool(""))
+print(bool([]))
+print(bool({}))
+print(bool(None))
+
+
+print("\n------\n") #separador
+
+print("Retornaran True")
+print(bool(5))
+print(bool(1.4))
+print(bool("lidia"))
+print(bool([1, 2]))
+print(bool(...))
+
+print("\n------\n") #separador
+
+#Clases especiales
+#None
+
