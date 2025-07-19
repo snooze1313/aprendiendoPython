@@ -14,8 +14,7 @@ potenciar con elementos de machine learning (hoy en dia mal llamado IA), unido a
 la robotica, este lenguage me permitira de forma accesible aprender algoritmos usados en el
 machine lerning y data science.
 
-Mi brujula para este viaje esta siendo el libro (por algun motivo siento que es una aventura,
-tenia tiempo sin sentir algo asi) "El lenguaje de programacion Python de principio a fin" por
+Mi brujula para este viaje esta siendo el libro (por algun motivo siento que es una aventura) "El lenguaje de programacion Python de principio a fin" por
 Angel Pablo Hinojosa Gutierrez.
 
 ![alt](/libro.jpg)
