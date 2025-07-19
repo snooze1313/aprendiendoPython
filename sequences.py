@@ -109,3 +109,153 @@ nidadas = (
     )
 )
 
+
+print("----------") #separador
+
+
+#LISTAS
+#Las listas son secuencias ordenas de elementos a los que se puede acceder por su posicion, exactamente igual que las tuplas, con la diferencia que se pueden modificar. Una lista es un objeto mutable, por lo que, al contrario visto con las tuplas.
+
+#Las listas se declaran entre corchetes y separando los elementos con comas.
+
+lista = ["primero", "segundo", "tercero", "cuarto"]
+
+print(lista)
+
+
+#si es necesario, se puede crear una lista vacia solo usando corchetes.
+lista = []
+
+#una lista puede tambien ser creada con la funcion list():
+lista = list(("hola","mundo"))
+
+print(lista)
+
+#usada la funcion list() sin argumentos retornara una lista vacia. si sele pasa una tupla, creara la lista con los elementos iterables.
+
+#Al igual que las secuencias las listas son accesibles mediante indices y ademas poder modificarlas.
+
+
+print("----------") #separador
+
+
+lista = ["primero", "segundo", "tercero", "cuarto"]
+
+print(lista[2]) #mostrara el tercer elemento
+
+lista[2] = "elemento modificado"
+
+print(lista)
+
+#Si llegaramos a usar un indice fuera del alcance de la lista dara error
+#emplo: lista[10]
+
+#Al igual que las tuplas se puede fotmastear las listas anidadas
+
+lista_letras = [
+    "a", "b", "c", "d",
+    "e", "f", "g", "h",
+    "i", "j",
+]
+
+
+print("----------") #separador
+
+
+#es posible eliminar un elementos de estas listas pero esto hara que el indice de los demas elementos se vea afectado
+
+#Las listas cuentan con metodos propios que permiten modificar de estas.
+
+#el primero de estos es append(), que anade un nuevo elemento al final de la lista.
+
+lista = ["cero", "uno", "dos"]
+
+print(lista)
+
+lista.append("tres") #Se anadio el elemento tres al final de la lsita
+
+print(lista)
+
+
+#el metodo insert permite indicar como primer argumento la posicion en la que se introducira el elemento indicado como segundo argumento. Los elementos posteriores a esa posicion se desplazaran un indice.
+
+lista.insert(2, "uno y medio") #Se anade un elemento entre el indice [2] y [3]
+
+print(lista)
+
+
+print("----------") #separador
+
+
+#El opuesto es remove(), que eliminar la primera aparicion del elemento que se le pasa que se le pasa como argumento. Si no existe el elemento que se quiere borrar, lanzara un error.
+
+lista.remove("uno y medio")
+
+print(lista) #Se eleimino el elemento "uno y medio"
+
+#un metodo mas drastico es clear(), que se usa sin argumento y este elimina todos los elementos de la lista.
+
+
+print("----------") #separador
+
+
+numeros = [1, 2, 3, 4, 5]
+
+print(numeros)
+
+numeros.clear() #vaciar la lista
+
+print(numeros) #imprime la lista vacia
+
+
+#elmetodo reverse() invierte el orden de la lista:
+
+numeros = [1, 2, 3, 4, 5]
+
+print(numeros)
+
+numeros.reverse()
+
+print(numeros)
+
+
+print("----------") #separador
+
+
+#el metodo pop() elimina el ultimo elemento de una lista y lo retorna. Si la lista esta vacia saltara un error
+
+numeros = ["cero", "uno", "dos"]
+
+print(numeros)
+
+print("numero popeado: ", numeros.pop())
+
+print("numeros restantes: ", numeros)
+
+
+#El metodo copy() retorna una copia de una lista "superficial", lo que implica que, si la lista contiene a objetos mutables, modificar esos objetos en la lista original tambien modificara la copia y viceversa.
+
+vocales = ["aeiou"]
+
+copia_vocales = vocales.copy()
+
+print(vocales)
+print(copia_vocales)
+
+
+print("----------") #separador
+
+
+#El metodo sort() reordena los elemenmtos en la lista. Si se ejecuta sin argumentos, ordenara la lista normalmente: numeros en orden ascendente, las cadenas por orden alfabetico, etc. Para poder ordenar los elementos, debe ser pociblecompararlos usando el operador "menor que" (<). Si sele pasa el argumento con nombre reverse con valor True (por defecto False), el orden de los elementos se invertira.
+
+ciudades = ["Granada", "Boston", "Anara", "Beijin"]
+
+print(ciudades)
+
+ciudades.sort()
+
+print(ciudades)
+
+ciudades.sort(reverse = True)
+
+print(ciudades)
