@@ -293,3 +293,49 @@ print("\n------\n") #separador
 print(complex(3, 7))
 print(complex(0, 21))
 print(complex(10, 3e7))
+
+print("\n------\n") #separador
+
+
+#valores logicos
+#los valores de clase bool, tambien llamados valores logicos o "booleanos" son solo dos: "cierto" y "falso", que en python se representan mediante las palabras reservadas True y False, respectivamente.
+True
+False
+
+#Se utilizan en muchos contextos en los que nuestros proogramas tengan que tomar desiciones en base a ciertas condiciones, y hay muchas funciones y operaciones que retornan valores logicos.
+
+#Las listas, tuplas, diccionarios y otros contenedores retornaran True si contienen al menos un elemento y False si estan vacios.
+print("retornaran false: ")
+print(bool())
+print(bool(0))
+print(bool(""))
+print(bool([]))
+print(bool({}))
+print(bool(None))
+
+
+print("\n------\n") #separador
+
+print("Retornaran True")
+print(bool(5))
+print(bool(1.4))
+print(bool("lidia"))
+print(bool([1, 2]))
+print(bool(...))
+
+print("\n------\n") #separador
+
+#Clases especiales
+
+#None
+#el objeto none es lo que retornamos en las funciones que no retornan explicitamente ningun resultado. Se usa en muchas circunstancias, siempre que es necesario indicar la ausencia de una objeto. es un sigleton, un objeto del que solo hay una instancia. es dfecir: todos lo None son referenciasd al mismo None. En un contexto booleano, None retorna False.
+
+
+#NotImplemented
+#Al igual que none, notimplemented se usa como retorno en algunos metodos numericos y de comparacion especiales, para indicar que el metodo que lo retorna no esta implementado.
+#En las operaciones logicas, notimplemented retorna True, pero esto es una caracteristica obsoleta, y notimplemented no deberia usarse en un contexto booleano.
+
+
+#Eli[sis
+#Elipsis es otro singleton. Se representa con un literal por medio de tres puntos seguidos (...) y tambien con la palabra reservada Elipsis. Actualmente no tiene ningun tipo de uso en python (salvo en algunos paquetes de terceros, como el paquete de calculo NumPy).
+#En un contexto booleano, Elipsis retornara True.
