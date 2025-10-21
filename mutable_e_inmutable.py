@@ -1,0 +1,3 @@
+#En los len guajes de programacion las variables se pueden ver como "cajas" en las que se guarda un valor (una cadena, un numero o lo que sea), de hecho, normalmente hablamos asi de python.
+#En python esta imagen tambien sirve como una primera aproximacion pero la cosa es un poco mas compleja. el funcionamiento interno de las variables es algo diferente.
+#como ya hemmos visto, una variable en python es un nombre, una referencia a un objeto. Es decir; como si fuera una etiqueta que esta enlazada a este objeto. El objeto en si tiene su propio nombre interno asignado por python y que es accesible con la funcion id() pasandole como argumento el objeto.
