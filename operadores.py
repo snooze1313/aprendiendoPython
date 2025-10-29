@@ -99,3 +99,95 @@ print("----------------------------\n\n") #separador
 
 
 #   OPERADORES LOGICOS
+#Son aquellos que sirven para efectuar operaciones con valores logicos. Estos operadores retornan tambien valores logicos (True o False) dependiendo del resultado de la operacion.
+
+#operador       operacion
+#   and         y logico (retorna True si ambos operandos son True)
+#   or          o logico (retorna True si al menos uno de los operandos es True)
+#   not         negacion (invierte el valor logico del operando)
+
+#El operador and equivale a la conjuncion logica "y logica", y retorna un valor cierto solo si ambos operando son tambien ciertos.
+
+#tabla del operardor and
+#operando1   operando2   resultado
+#  True       True        True
+#  True       False       False
+#  False      True        False
+#  False      False       False
+
+#El operador logico or equivale a la conjuncion "o logica", y retorna un valor cierto siempre que no sean ambos operandos falsos.
+
+#tabla del operardor or
+#operando1   operando2   resultado
+#  True       True        True
+#  True       False       True
+#  False      True        True
+#  False      False       False
+
+#Al contrario que los anteriores, el operador  not se aplica sobre un solo operando (se dice que es un operador unario). E invierte el valor logico de este. Si el operando es True, retorna False; y si es False, retorna True.
+
+#tabla del operardor not
+#operando    resultado
+#  True       False
+#  False      True
+
+resultado = 3 == 2
+print(resultado)  # False
+#3 no es igual a 2, por lo que la expresion retorna False
+
+print(True and True)  # True
+#ambos operandos son True, por lo que la expresion retorna True
+
+print(True and False)  # False
+#uno de los operandos es False, por lo que la expresion retorna False
+
+print(False or True)  # True
+#uno de los operandos es True, por lo que la expresion retorna True
+
+print(False or False)  # False
+#ambos operandos son False, por lo que la expresion retorna False
+
+print(not True)  # False
+#el operando es True, por lo que la expresion retorna False
+
+print(not False)  # True
+#el operando es False, por lo que la expresion retorna True
+
+print("----------------------------\n\n") #separador
+
+#Aunque todo lo anterior es correcto, los operadores and y or tienen algunas pecuiliaridaes encaminadas a mejorar su eficiencia.
+ 
+#Dado a que and solo se cumple si ambos operardores son evaluados como True, en los casos en el que el primer operando resulta ser False resulta redundante comprobar el segundo operando.
+
+# Del mismo modo, dado a que or se cumple si al menos uno de los operandos es True, en los casos en los que el primer operando resulta ser True resulta redundante comprobar el segundo operando.
+
+lista=[]
+print(lista or "lista vacia") # Retorna "lista vacia"
+#la lista esta vacia, por lo que el primer operando es False, y se retorna el segundo operando
+
+print(lista and "lista vacia") # Retorna []
+#la lista esta vacia, por lo que el primer operando es False, y se retorna el primer operando
+
+
+print("----------------------------\n\n") #separador
+
+
+#    OPERADORES DE IDENTIDAD
+#Un caso especial son los operadores de identidad is e is not,.
+
+#operador       operacion
+#   is          es identico a (verifica si ambos operandos son el mismo objeto en memoria)
+#   is not      no es identico a (verifica si ambos operandos no son el mismo objeto en memoria)
+
+#Abos operadores sirven para comparar objetos. El operador is devuelve  True si ambos elementos comparados son el mismo objeto (poseen el mismo id en memoria), y False si no lo son. El operador is not hace lo contrario: devuelve True si ambos elementos comparados no son el mismo objeto, y False si lo son.
+
+a = [1, 2, 3]
+b = a  # b referencia al mismo objeto que a
+
+print(a is b)      # True
+print(a is not b)  # False
+
+
+print("----------------------------\n\n") #separador
+
+#    OPERADORES DE PERTENENCIA
