@@ -191,3 +191,118 @@ print(a is not b)  # False
 print("----------------------------\n\n") #separador
 
 #    OPERADORES DE PERTENENCIA
+#los operadores de pertenencia in y not sirven para indicar que un elemento pertenece o no a un contenedor.
+#operador       operacion
+#   in          en (verifica si el operando de la izquierda esta contenido en el operando de la derecha)
+#   not in      no en (verifica si el operando de la izquierda no esta contenido en el operando de la derecha)
+
+#El operador in retorna un volor True si el elemento indicado a la izquierda del operador esta en el contenedor indicado a la derecha del operador. El operador not in hace lo contrario, y retorna True si el elemento no esta en el contenedor y False si no lo esta.
+
+lista = ["silla", "mesa", "armario", "taburete"]
+print("silla" in lista) #Mostrara True, porque "silla" esta en la lista
+
+print("sofa" in lista) #Mostrara False, porque "sofa" no esta en la lista
+
+print("mesa" not in lista) #Mostrara False, porque "mesa" esta en la lista
+
+print(4 in lista) #Mostrara False
+
+print("hola" not in lista) #Mostrara True
+
+print(3 in range(10)) #Mostrara True
+
+
+print("----------------------------\n\n") #separador
+
+#Los operadores in y not in se pueden usar tambien para comprobar la pertenencia a un diccionario. El operador in retornara True si el primer operando coincide con alguna clave del diccionario. El operador not in retornara True cuando el primer operando no coincida con ninguna clave
+
+mar = {"a": "Almeja",
+       "b" : "Bacalao",
+       "c": "Cangrejo"}
+
+print("a" in mar) #Mostrara "True"
+
+print("Bacalao" in mar) #Mostrara "False"
+
+#En el caso de cadenas, bytes y bytearrays, estos operadores pueden usarse para comprobar si una cadena esta contenida en otra. El operador in retornara True si la secuencia del primer operando esta incluida en la secuencia del segundo operando; y not in retornara True si la secuencia del primer operando no esta en el segundo.
+
+musculo = "esternocleidomastoideo"
+
+print("nocle" in musculo) #Retornara True
+
+print(b"cada" in b"abracadabra") #Retornara True
+
+#Si tratamos de comprobar, con estos operadores, subcadenas de tipos distintos (como una  bytes en una str) se lanzara una excepcion de la clase TypeError.
+
+
+print("----------------------------\n\n") #separador
+
+
+#       OPERADORES PARA CONJUNTOS
+
+#Los siguientes operadores pueden usarse sobre conjuntos (objetos de las clases set y frozenset), y retornan un nuevo conjunto, resultado de la operacion correspondiente.
+
+# Operador  Operacion
+#   |           Union
+#   &           Inserccion
+#   -           Diferencia (es el mismo operador de resta)
+#   ^           Diferendcia simetrica
+
+#La union retorna el resultado de unir los dos sets o frozensets. El conjunto tendra los elementos de ambos conjuntosoriginales, excluyendo las repeticiones.
+
+union = {0, 1, 2, 3} | {2, 3, 4, 5}
+print(union) #Retorna {0, 1, 2, 3, 4, 5}
+
+
+#La diferencia de dos sets retorna un tercero con los elementos del primero menos los elementos del segundo.
+
+diferencia = {0, 1, 2, 3} - {2, 3, 4, 5}
+print(diferencia) #Retorna {0, 1}
+
+
+#La insercion de dos conjuntos retorna el conjunto que son ambos comunes
+
+interseccion = {0, 1, 2, 3} & {2, 3, 4, 5}
+print(interseccion) #Retorna {2, 3}
+
+
+#La diferencia simetrica es la opuesta a la anterior, y retorna el conjunto de elementos de ambos, excluyendo los que tienen en comun.
+
+dif_simetrica = {0, 1, 2, 3} ^ {2, 3, 4, 5}
+print(dif_simetrica) #Retorna {0, 1, 4, 5}
+
+
+print("----------------------------\n\n") #separador
+
+
+#Para todos estos operadores existe una version con asignacion, que opera exactamente igual, pero asignando el resultado al primer operando, en lugar de retornarlo.
+
+#Operador               Operacion
+#   |=              Union con asignacion
+#   &=              Inserccion con asignacion
+#   -=              Diferencia con asignacion
+#   ^=              Diferencia simetrica con asignacion
+
+
+a = {0, 1, 2, 3}
+b = {2, 3, 4, 5}
+a |= b
+print(a) #Retorna {0, 1, 2, 3, 4, 5}
+
+
+a = {0, 1, 2, 3}
+b = {2, 3, 4, 5}
+a -= b
+print(a) #Retorna {0, 1}
+
+
+a = {0, 1, 2, 3}
+b = {2, 3, 4, 5}
+a &= b
+print(a) #Retorna {2, 3}
+
+
+a = {0, 1, 2, 3}
+b = {2, 3, 4, 5}
+a ^= b
+print(a) #Retorna {0, 1, 4, 5}
