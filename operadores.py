@@ -306,3 +306,47 @@ a = {0, 1, 2, 3}
 b = {2, 3, 4, 5}
 a ^= b
 print(a) #Retorna {0, 1, 4, 5}
+
+
+
+print("----------------------------\n\n") #separador
+
+
+#             OPERADORES BINARIOS
+
+#Los operadores binarios son bastante poco usados en la practica,  sirven para operar sobre las representaciones de los valores numericos. Los operadores binarios de pthon son los siguientes:
+
+#  Operador    Operacion
+#      &         AND    
+#      \         OR
+#      ^         XOR
+#      ~         NOT
+#      <<        Desplazamiento logico a la izquierda
+#      >>        Desplazam,iento logico a la derecha
+
+#El operador AND binario (&) compara las representaciones de los numeros proporcionados y devuelve un numero que tiene unos en las posiciones donde ambos operadores tienen uno  un cero enlas posiciones donde alguno de ellos tiene un cero:
+
+#Primer oprando      Segundo operando     Resultado
+#      1                    1                    1
+#      1                    0                    0
+#      0                    1                    0
+#      0                    0                    0
+
+numero1 = 0b1011 
+numero2 = 0b101
+
+print(numero1) #11
+print(numero2) #5
+
+print(numero1 & numero2) #1
+
+
+#El operador OR binario (|), retorna un numero tal que su representacion binaria contenga al menos uno de los operandos un uno en esa posicion,  un cero si ambos tienen un cero en ella.
+
+#El operador binario XOR (^) retorna un numero tal que su representacion binaria contenga un uno si los operadorers tienen distinto numero en esa posicion  un cero si ambos compartenel mismo numero en ella,
+
+#El desplazamiento logico a la dewrecha mueve los bits del operando de la izquierda tantos espacios como indique el operador de la derecha. Los bits menores que el primero son descartados.
+
+#El desplazamiento a la izquierda desplaza los bits del operando de la izquierda a la derecha, el espacio que deja este desplazamiento se rellena con ceros.
+
+#La operacion NOT binaria, tambien llamada complemento a uno, actua sobre la representacion binaria de un numero, y retorna otro numero en el que los unos del original han sido remplazados por ceros y los ceros por unos.
