@@ -350,3 +350,40 @@ print(numero1 & numero2) #1
 #El desplazamiento a la izquierda desplaza los bits del operando de la izquierda a la derecha, el espacio que deja este desplazamiento se rellena con ceros.
 
 #La operacion NOT binaria, tambien llamada complemento a uno, actua sobre la representacion binaria de un numero, y retorna otro numero en el que los unos del original han sido remplazados por ceros y los ceros por unos.
+
+
+print("----------------------------\n\n") #separador
+
+
+#             PRECEDENCIA ENTRE OPERADORES
+#Naturalmente, se puede combiar varios operadores y operandos distintos para hacer expresiones complejas:
+
+resultado = 6 / 4 / 5 * 12 / 2 ** 2
+print(resultado)
+
+#cuando esto ocurre, puede darse el caso de que obtener distintos resultados de en que orden se efectuen las operaciones, para evitar esas abiguedades, python resuelve las operaciones segun un orden de precedencia. Dentro de cada expresion, se evaluan en el orden que muestra la siguiente lista:
+
+#      PRESEDENCIA DE OPERACIONES
+# **          (POTENCIA)
+# ~           (NOT BINARIO)
+# *           (MULTIPLICACION)
+# +, -        (SUMA), (RESTA)
+# <<, >>      (DESPLAZAMIENTO LOGICO A LA IZQUIERDA), (DESPLAZAMIENTO LOGICO A LA DERECHA)
+# &           (AND BINARIO)
+# ^           (XOR BINARIO)
+# |           (OR BINARIO)
+# >, <, >=, <=, ==, !=, IS, NOT IS, IN, NOT IN     (MAYOR QUE), (MENOR QUE), (OPERADORES DE PERTENENCIA)
+# NOT         (NEGACION)
+# AND         (Y LOGICA)
+# OR          (O LOGICA)
+
+
+#Las operaciones con la misma pertenencia (es decir en la misma fila de la tabla anterior) se resuelve de izquierda a derecha.
+
+#Aunque el signo igual (=) que usamos en la asignacion no es un operador en sentido estricto, a menudo se le trata como tal y se le llama operador de asignacion. En cualquier caso, es el que menos prioridad tiene, porque todas las operaciones tienen, porque todas las operaciones de una expresion deben resolverse antes de asignar el resultado a una variable.
+
+#Naturalmente, se pueden usar parentesis para cambiar el orden de las operaciones:
+variable1 = 5 / 4 * 7
+variable2 = (5 / 4) * 7
+print(variable1)
+print(variable2)
